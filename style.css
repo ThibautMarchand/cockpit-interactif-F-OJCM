@@ -16,8 +16,8 @@ img {
 
 #info-box {
   position: absolute;
-  background: rgba(255, 255, 255, 0.85); /* Fond plus opaque pour renforcer le contraste */
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.5); /* Fond plus opaque pour renforcer le contraste */
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 8px;
   border: 1px solid rgba(80, 80, 80, 0.3);
