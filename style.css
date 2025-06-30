@@ -79,6 +79,7 @@ animation: fadeInHUD 150ms ease-out;
   }
 }
 
+/* Animation de fondu rapide */
 @keyframes fadeInHUD {
   from {
     opacity: 0;
