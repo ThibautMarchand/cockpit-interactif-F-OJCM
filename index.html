@@ -191,39 +191,28 @@
   </div>
 
   <script>
-  function showInfo(titre, description) {
-    document.getElementById("info-title").textContent = titre;
-    document.getElementById("info-description").textContent = description;
-    document.getElementById("info-box").style.display = "block";
-  }
+    document.querySelectorAll("area").forEach(area => {
+      const title = area.dataset.title;
+      const info = area.dataset.info;
 
-  function closeInfo() {
-    document.getElementById("info-box").style.display = "none";
-  }
-
-  function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  }
-
-  document.querySelectorAll("area").forEach(area => {
-    const title = area.dataset.title;
-    const info = area.dataset.info;
-
-    if (isTouchDevice()) {
       area.addEventListener("click", function (e) {
         e.preventDefault();
+
         const box = document.getElementById("info-box");
-        if (box.style.display === "block") {
-          closeInfo();
-        } else {
-          showInfo(title, info);
-        }
+        document.getElementById("info-title").textContent = title;
+        document.getElementById("info-description").textContent = info;
+
+        // Position dynamique au clic
+        box.style.position = "absolute";
+        box.style.left = e.pageX + "px";
+        box.style.top = e.pageY + "px";
+        box.style.display = "block";
       });
-    } else {
-      area.addEventListener("mouseover", () => showInfo(title, info));
-      area.addEventListener("mouseout", closeInfo);
+    });
+
+    function closeInfo() {
+      document.getElementById("info-box").style.display = "none";
     }
-  });
-</script>
+  </script>
 </body>
 </html>
