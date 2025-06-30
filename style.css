@@ -39,3 +39,17 @@ img {
 #info-box button:hover {
   background-color: #005a94;
 }
+
+@media (max-width: 768px) {
+  #info-box {
+    width: 90%;
+    top: 10%;
+    left: 5%;
+    transform: none;
+    font-size: 1rem;
+  }
+
+  #info-box button {
+    font-size: 1rem;
+  }
+}
