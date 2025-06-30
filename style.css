@@ -16,17 +16,17 @@ img {
 
 #info-box {
   position: absolute;
-  background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
-  backdrop-filter: blur(8px); /* Effet verre dépoli */
-  -webkit-backdrop-filter: blur(8px); /* Compatibilité Safari */
+  background: rgba(255, 255, 255, 0.85); /* Fond plus opaque pour renforcer le contraste */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 8px;
-  border: 1px solid rgba(100, 100, 100, 0.3);
+  border: 1px solid rgba(80, 80, 80, 0.3);
   padding: 1rem;
   width: 300px;
-  color: #111; /* Texte bien lisible */
+  color: #000; /* Texte noir net */
   font-family: system-ui, sans-serif;
   font-size: 1rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: none;
 }
@@ -43,15 +43,16 @@ img {
 }
 
 #info-box strong {
+  color: #111;
   font-size: 1.1rem;
-  font-weight: bold;
-  display: block;
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 #info-box p {
+  color: #222;
+  line-height: 1.5;
   margin: 0;
-  line-height: 1.4;
 }
 
 #info-box button:hover {
