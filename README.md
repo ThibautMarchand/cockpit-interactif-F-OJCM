@@ -11,9 +11,7 @@ Ce projet a été conçu pour :
 
 ## 🖱️ Fonctionnement
 
-- Passez la souris sur les instruments : une boîte descriptive apparaît automatiquement.
-- Quittez la zone : la description disparaît.
-- Aucun clic nécessaire — l’objectif est une lecture fluide, rapide et intuitive.
+- Cliquez sur les instruments : une boîte descriptive apparaît automatiquement.
 
 ## 🔧 Technologies utilisées
 
