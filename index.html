@@ -4,229 +4,185 @@
 	<meta charset="UTF-8">
  	<title>Cockpit C172 Interactif</title>
   	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   	<h2>Tableau de bord interactif — Cessna 172 F-OJCM</h2>
   	<img src="tableau_bord.jpg" usemap="#cockpit" alt="Cockpit C172" width="1200">
 
   <map name="cockpit">
-    	<!-- Anémomètre -->
-    	<area shape="circle" coords="289,170,39" alt="Anémomètre" title="Anémomètre"
-  	onmouseover="showInfo('Anémomètre', 'Aussi appelé Badin. Indique la vitesse de l’avion par rapport au vent relatif. L’unité est le nœud.')"
-  	onmouseout="closeInfo()">
+  <area shape="circle" coords="288,169,37" alt="Anémomètre" title="Anémomètre"
+    data-title="Anémomètre"
+    data-info="Aussi appelé Badin. Indique la vitesse de l’avion par rapport au vent relatif via le tube Pitot. L’unité est le nœud.">
 
-	<!-- Horizon artificiel -->
-    	<area shape="circle" coords="388,171,37" alt="Horizon artificiel" title="Horizon artificiel"
-  	onmouseover="showInfo('Horizon artificiel', 'L’horizon artificiel est un gyroscope qui permet de connaître l’assiette et l’inclinaison de l’avion.')"
-  	onmouseout="closeInfo()">
+  <area shape="circle" coords="388,171,37" alt="Horizon artificiel" title="Horizon artificiel"
+    data-title="Horizon artificiel"
+    data-info="Instrument gyroscopique qui indique l’assiette de l’avion en tangage et roulis.">
 
-	<!-- Altimètre -->
-  	<area shape="circle" coords="486,171,38" alt="Altimètre" title="Altimètre"
-    	onmouseover="showInfo('Altimètre', 'Mesure l’altitude de l’avion par rapport au niveau de la mer à l’aide de la pression atmosphérique.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="486,171,38" alt="Altimètre" title="Altimètre"
+    data-title="Altimètre"
+    data-info="Mesure l’altitude de l’avion par rapport au niveau de la mer à l’aide de la pression atmosphérique.">
 
-  	<!-- Bille aiguille -->
-  	<area shape="circle" coords="304,270,35" alt="Bille aiguille" title="Bille aiguille"
-    	onmouseover="showInfo('Bille-aiguille', 'Indique la coordination du virage (bille) et le taux de virage (aiguille).')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="304,270,35" alt="Bille aiguille" title="Bille aiguille"
+    data-title="Bille-aiguille"
+    data-info="Indique la coordination du virage (bille) et le taux de virage (aiguille).">
 
-  	<!-- Conservateur de cap -->
-  	<area shape="circle" coords="396,268,39" alt="Conservateur de cap" title="Conservateur de cap"
-    	onmouseover="showInfo('Conservateur de cap', 'Indique le cap de l’avion grâce à un gyroscope, plus stable que le compas magnétique.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="396,268,39" alt="Conservateur de cap" title="Conservateur de cap"
+    data-title="Conservateur de cap"
+    data-info="Indique le cap de l’avion grâce à un gyroscope, plus stable que le compas magnétique.">
 
-  	<!-- Variomètre -->
-  	<area shape="circle" coords="490,269,34" alt="Variomètre" title="Variomètre"
-    	onmouseover="showInfo('Variomètre', 'Affiche le taux de montée ou descente en pieds/minute.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="490,269,34" alt="Variomètre" title="Variomètre"
+    data-title="Variomètre"
+    data-info="Affiche le taux de montée ou descente en pieds/minute.">
 
-  	<!-- VOR/ILS -->
-  	<area shape="circle" coords="580,175,41" alt="VOR/ILS" title="VOR/ILS"
-    	onmouseover="showInfo('VOR/ILS', 'Instrument de navigation permettant le suivi radial VOR ou axe ILS en approche instrumentale.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="580,175,41" alt="VOR/ILS" title="VOR/ILS"
+    data-title="VOR/ILS"
+    data-info="Instrument de navigation permettant le suivi radial VOR ou axe ILS en approche instrumentale.">
 
-  	<!-- VOR2 -->
-  	<area shape="circle" coords="582,270,39" alt="VOR2" title="VOR2"
-    	onmouseover="showInfo('VOR 2', 'Second instrument de navigation VOR, souvent utilisé pour surveiller une balise secondaire.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="582,270,39" alt="VOR2" title="VOR2"
+    data-title="VOR 2"
+    data-info="Second instrument de navigation VOR, souvent utilisé pour surveiller une balise secondaire.">
 
-  	<!-- Tachymètre (Compteur RPM) -->
-  	<area shape="circle" coords="491,363,38" alt="Tachymètre" title="Tachymètre"
-    	onmouseover="showInfo('Tachymètre', 'Indique le régime moteur en tours par minute (RPM). Utile pour contrôler la puissance.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="491,363,38" alt="Tachymètre" title="Tachymètre"
+    data-title="Tachymètre"
+    data-info="Indique le régime moteur en tours par minute (RPM). Utile pour contrôler la puissance.">
 
-  	<!-- Jauges carburant -->
-  	<area shape="circle" coords="147,256,24" alt="Jauges carburant" title="Jauges carburant"
-    	onmouseover="showInfo('Jauges carburant', 'Affichent le niveau de carburant restant dans chaque réservoir (Gauche / Droit).')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="147,256,24" alt="Jauges carburant" title="Jauges carburant"
+    data-title="Jauges carburant"
+    data-info="Affichent le niveau de carburant restant dans chaque réservoir (Gauche / Droit).">
 
-  	<!-- Température échappement et Fuel flow -->
-  	<area shape="circle" coords="215,256,28" alt="T°C échappement & Fuel flow" title="T°C échappement & Fuel flow"
-    	onmouseover="showInfo('Température échappement & Fuel Flow', 'Température des gaz d’échappement (EGT) et débit de carburant vers le moteur.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="215,256,28" alt="T°C échappement & Fuel flow" title="T°C échappement & Fuel flow"
+    data-title="Température échappement & Fuel Flow"
+    data-info="Température des gaz d’échappement (EGT) et débit de carburant vers le moteur.">
 
-  	<!-- Température et pression d'huile -->
-  	<area shape="circle" coords="163,329,22" alt="T°C & pression d'huile" title="T°C & pression d'huile"
-    	onmouseover="showInfo('Température et pression d’huile', 'Permet de surveiller la température et la pression de l’huile moteur.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="163,329,22" alt="T°C & pression d'huile" title="T°C & pression d'huile"
+    data-title="Température et pression d’huile"
+    data-info="Permet de surveiller la température et la pression de l’huile moteur.">
 
-  	<!-- VAC & charge alternateur -->
-  	<area shape="circle" coords="226,330,25" alt="VAC & charge alternateur" title="VAC & charge alternateur"
-    	onmouseover="showInfo('Vacuum & Alternateur', 'Surveillance du système de dépression (Vac) et de la charge électrique de l’alternateur.')"
-    	onmouseout="closeInfo()">
+  <area shape="circle" coords="226,330,25" alt="VAC & charge alternateur" title="VAC & charge alternateur"
+    data-title="Vacuum & Alternateur"
+    data-info="Surveillance du système de dépression (Vac) et de la charge électrique de l’alternateur.">
 
-  	<!-- Détecteur de monoxyde de carbone -->
-  	<area shape="rect" coords="557,324,610,373" alt="Détecteur de monoxyde de carbone" title="Détecteur de monoxyde de carbone"
-    	onmouseover="showInfo('Détecteur de monoxyde de carbone', 'Alerte le pilote en cas de présence de CO dans la cabine, gaz inodore mais toxique.')"
-    	onmouseout="closeInfo()">
+  <area shape="rect" coords="557,324,610,373" alt="Détecteur de monoxyde de carbone" title="Détecteur de monoxyde de carbone"
+    data-title="Détecteur de monoxyde de carbone"
+    data-info="Alerte le pilote en cas de présence de CO dans la cabine, gaz inodore mais toxique.">
 
-<!-- Indicatif de l'avion -->
   <area shape="rect" coords="677,93,789,113" alt="Indicatif de l'avion" title="Indicatif de l'avion"
-    onmouseover="showInfo('Indicatif de l’avion', 'Identifie l’appareil sur le plan administratif et pour les communications radio.')"
-    onmouseout="closeInfo()">
+    data-title="Indicatif de l’avion"
+    data-info="Identifie l’appareil sur le plan administratif et pour les communications radio.">
 
-  <!-- Boîte de mélange -->
   <area shape="rect" coords="651,115,810,148" alt="Boîte de mélange" title="Boîte de mélange"
-    onmouseover="showInfo('Boîte de mélange', 'Permet de régler les volumes audios NAV/COM, marker beacon, et autres sources sonores.')"
-    onmouseout="closeInfo()">
+    data-title="Boîte de mélange"
+    data-info="Permet de régler les volumes audios NAV/COM, marker beacon, et autres sources sonores.">
 
-  <!-- GPS -->
   <area shape="rect" coords="647,150,807,207" alt="GPS" title="GPS"
-    onmouseover="showInfo('GPS', 'Système de positionnement global offrant navigation directe, waypoints, distances et vitesse sol.')"
-    onmouseout="closeInfo()">
+    data-title="GPS"
+    data-info="Système de positionnement global offrant navigation directe, waypoints, distances et vitesse sol.">
 
-  <!-- VHF1/VOR1 -->
   <area shape="rect" coords="647,212,800,260" alt="VHF1/VOR1" title="VHF1/VOR1"
-    onmouseover="showInfo('VHF1 / VOR1', 'Radio NAV/COM permettant la communication et la navigation via une balise VOR primaire.')"
-    onmouseout="closeInfo()">
+    data-title="VHF1 / VOR1"
+    data-info="Radio NAV/COM permettant la communication et la navigation via une balise VOR primaire.">
 
-  <!-- VHF2/VOR2 -->
   <area shape="rect" coords="643,266,799,314" alt="VHF2/VOR2" title="VHF2/VOR2"
-    onmouseover="showInfo('VHF2 / VOR2', 'Seconde radio de secours ou alternative pour la navigation ou la communication.')"
-    onmouseout="closeInfo()">
+    data-title="VHF2 / VOR2"
+    data-info="Seconde radio de secours ou alternative pour la navigation ou la communication.">
 
-  <!-- Transpondeur -->
-  <area shape="rect" coords="641,315,790,351" alt="Transpondeur" title="Transpondeur"
-    onmouseover="showInfo('Transpondeur', 'Émet un code radar (Squawk) pour identification par le contrôle aérien.')"
-    onmouseout="closeInfo()">
+<area shape="rect" coords="641,315,790,351" alt="Transpondeur" title="Transpondeur"
+    data-title="Transpondeur"
+    data-info="Émet un code radar (Squawk) pour identification par le contrôle aérien.">
 
-  <!-- Panneau alarmes -->
   <area shape="rect" coords="411,100,518,124" alt="Panneau alarmes" title="Panneau alarmes"
-    onmouseover="showInfo('Panneau alarmes', 'Affiche les voyants d’alerte liés aux systèmes électriques ou moteurs.')"
-    onmouseout="closeInfo()">
+    data-title="Panneau alarmes"
+    data-info="Affiche les voyants d’alerte liés aux systèmes électriques ou moteurs.">
 
-  <!-- Disjoncteur principal -->
   <area shape="rect" coords="347,393,155,368" alt="Disjoncteur" title="Disjoncteur"
-    onmouseover="showInfo('Disjoncteurs principaux', 'Protègent les circuits électriques de surcharge.')"
-    onmouseout="closeInfo()">
+    data-title="Disjoncteurs principaux"
+    data-info="Protègent les circuits électriques de surcharge.">
 
-  <!-- Sélecteur magnétos & démarreur -->
-  <area shape="rect" coords="171,449,213,487" alt="Magnétos & démarreur" title="Sélecteur magnétos & démarreur"
-    onmouseover="showInfo('Magnétos & Démarreur', 'Permet de choisir la source d’allumage moteur ou lancer le démarreur.')"
-    onmouseout="closeInfo()">
+  <area shape="rect" coords="171,449,213,487" alt="Sélecteur magnétos & démarreur" title="Sélecteur magnétos & démarreur"
+    data-title="Magnétos & Démarreur"
+    data-info="Permet de choisir la source d’allumage moteur ou lancer le démarreur.">
 
-  <!-- Alternateur & Batterie -->
   <area shape="rect" coords="233,456,255,491" alt="Alternateur & Batterie" title="Alternateur & Batterie"
-    onmouseover="showInfo('Alternateur & Batterie', 'Permet l’activation de l’alternateur et de la batterie principale.')"
-    onmouseout="closeInfo()">
+    data-title="Alternateur & Batterie"
+    data-info="Permet l’activation de l’alternateur et de la batterie principale.">
 
-  <!-- Disjoncteurs secondaires -->
-  <area shape="rect" coords="257,437,455,457" alt="Disjoncteurs secondaires" title="Disjoncteurs2"
-    onmouseover="showInfo('Disjoncteurs secondaires', 'Protections supplémentaires pour circuits non critiques.')"
-    onmouseout="closeInfo()">
+  <area shape="rect" coords="257,437,455,457" alt="Disjoncteurs2" title="Disjoncteurs2"
+    data-title="Disjoncteurs secondaires"
+    data-info="Protections supplémentaires pour circuits non critiques.">
 
-  <!-- Pompe carburant -->
   <area shape="circle" coords="269,495,12" alt="Pompe carburant" title="Pompe carburant"
-    onmouseover="showInfo('Pompe carburant', 'Utilisée en secours ou au démarrage pour alimenter le moteur.')"
-    onmouseout="closeInfo()">
+    data-title="Pompe carburant"
+    data-info="Utilisée en secours ou au démarrage pour alimenter le moteur.">
 
-  <!-- Avionic Master -->
   <area shape="rect" coords="398,457,422,492" alt="Avionic Master" title="Avionic Master"
-    onmouseover="showInfo('Avionics Master', 'Interrupteur général des équipements radio et électroniques de bord.')"
-    onmouseout="closeInfo()">
+    data-title="Avionics Master"
+    data-info="Interrupteur général des équipements radio et électroniques de bord.">
 
-  <!-- Feux -->
   <area shape="rect" coords="283,485,378,506" alt="Feux" title="Feux"
-    onmouseover="showInfo('Commande des feux', 'Permet d’activer les feux de position, d’atterrissage, anti-collision, etc.')"
-    onmouseout="closeInfo()">
+    data-title="Commande des feux"
+    data-info="Permet d’activer les feux de position, d’atterrissage, anti-collision, etc.">
 
-  <!-- Tableau de conversion pression -->
   <area shape="poly" coords="830,228,984,230,964,319,820,320" alt="Tableau de conversion pression" title="Tableau de conversion pression"
-    onmouseover="showInfo('Tableau de conversion pression', 'Permet de convertir les valeurs de QNH en millibars ou pouces de mercure.')"
-    onmouseout="closeInfo()">
+    data-title="Tableau de conversion pression"
+    data-info="Permet de convertir les valeurs de QNH en millibars ou pouces de mercure.">
 
-  <!-- Balise ELT -->
   <area shape="poly" coords="1042,159,1076,158,1062,209,1031,206" alt="Balise ELT" title="Balise ELT"
-    onmouseover="showInfo('Balise ELT', 'Balise de détresse automatique déclenchée en cas d’impact violent ou manuellement.')"
-    onmouseout="closeInfo()">
+    data-title="Balise ELT"
+    data-info="Balise de détresse automatique déclenchée en cas d’impact violent ou manuellement.">
 
-  <!-- Hobbs meter -->
   <area shape="poly" coords="1028,212,1024,231,1056,233,1060,212" alt="Hobbs meter" title="Hobbs meter"
-    onmouseover="showInfo('Compteur Hobbs', 'Enregistre le temps moteur ou de vol à des fins de maintenance ou location.')"
-    onmouseout="closeInfo()">
+    data-title="Compteur Hobbs"
+    data-info="Enregistre le temps moteur ou de vol à des fins de maintenance ou de location.">
 
-  <!-- Éclairage planche de bord -->
-  <area shape="circle" coords="575,464,14" alt="Éclairage planche de bord" title="Éclairage planche de bord"
-    onmouseover="showInfo('Éclairage tableau de bord', 'Règle l’intensité lumineuse des instruments de bord.')"
-    onmouseout="closeInfo()">
+  <area shape="circle" coords="575,464,14" alt="Eclairage planche de bord" title="Eclairage planche de bord"
+    data-title="Éclairage tableau de bord"
+    data-info="Règle l’intensité lumineuse des instruments de bord.">
 
-  <!-- Éclairage cabine -->
-  <area shape="circle" coords="576,508,15" alt="Éclairage cabine" title="Éclairage cabine"
-    onmouseover="showInfo('Éclairage cabine', 'Allume les lampes principales de l’habitacle pour le confort des passagers.')"
-    onmouseout="closeInfo()">
+  <area shape="circle" coords="576,508,15" alt="Eclairage cabine" title="Eclairage cabine"
+    data-title="Éclairage cabine"
+    data-info="Allume les lampes principales de l’habitacle pour le confort des passagers.">
 
-  <!-- Manette des gaz -->
   <area shape="circle" coords="629,448,27" alt="Manette des gaz" title="Manette des gaz"
-    onmouseover="showInfo('Manette des gaz', 'Contrôle la puissance moteur via l’ouverture du papillon des gaz.')"
-    onmouseout="closeInfo()">
+    data-title="Manette des gaz"
+    data-info="Contrôle la puissance moteur via l’ouverture du papillon des gaz.">
 
-  <!-- Mixture -->
   <area shape="circle" coords="702,447,30" alt="Mixture" title="Mixture"
-    onmouseover="showInfo('Commande de richesse', 'Ajuste la proportion air/carburant pour optimiser le fonctionnement du moteur.')"
-    onmouseout="closeInfo()">
+    data-title="Commande de richesse"
+    data-info="Ajuste la proportion air/carburant pour optimiser le fonctionnement du moteur.">
 
-  <!-- Statique secours -->
   <area shape="circle" coords="659,509,11" alt="Statique secours" title="Statique secours"
-    onmouseover="showInfo('Statique secondaire', 'Source de pression statique alternative si la principale est bouchée.')"
-    onmouseout="closeInfo()">
+    data-title="Statique secondaire"
+    data-info="Source de pression statique alternative si la principale est bouchée.">
 
-  <!-- Sélecteur de volets -->
   <area shape="rect" coords="771,446,821,509" alt="Sélecteur de volets" title="Sélecteur de volets"
-    onmouseover="showInfo('Sélecteur de volets', 'Permet de déployer ou rentrer les volets à différents angles.')"
-    onmouseout="closeInfo()">
+    data-title="Sélecteur de volets"
+    data-info="Permet de déployer ou rentrer les volets à différents angles.">
 
-  <!-- Chauffage cabine -->
   <area shape="circle" coords="891,447,18" alt="Chauffage cabine" title="Chauffage cabine"
-    onmouseover="showInfo('Chauffage cabine', 'Gère le débit d’air chaud pour réchauffer l’habitacle.')"
-    onmouseout="closeInfo()">
+    data-title="Chauffage cabine"
+    data-info="Gère le débit d’air chaud pour réchauffer l’habitacle.">
 
-  <!-- Ventilation cabine -->
   <area shape="circle" coords="895,487,19" alt="Ventilation cabine" title="Ventilation cabine"
-    onmouseover="showInfo('Ventilation cabine', 'Fournit un flux d’air extérieur pour le confort en cabine.')"
-    onmouseout="closeInfo()">
+    data-title="Ventilation cabine"
+    data-info="Fournit un flux d’air extérieur pour le confort en cabine.">
 
-<!-- Compensateur de profondeur -->
   <area shape="rect" coords="567,548,599,685" alt="Compensateur de profondeur" title="Compensateur de profondeur"
-    onmouseover="showInfo('Compensateur de profondeur', 'Molette de trim utilisée pour ajuster l’assiette sans forcer sur le manche.')"
-    onmouseout="closeInfo()">
+    data-title="Compensateur de profondeur"
+    data-info="Molette de trim utilisée pour ajuster l’assiette sans forcer sur le manche.">
 
-  <!-- Sélecteur de réservoir -->
   <area shape="rect" coords="580,791,670,838" alt="Sélecteur de réservoir" title="Sélecteur de réservoir"
-    onmouseover="showInfo('Sélecteur de réservoir carburant', 'Permet de choisir entre réservoir gauche, droit, ou les deux.')"
-    onmouseout="closeInfo()">
+    data-title="Sélecteur de réservoir carburant"
+    data-info="Permet de choisir entre réservoir gauche, droit, ou les deux.">
 
-  <!-- Fuel cut off -->
   <area shape="circle" coords="659,760,17" alt="Fuel cut off" title="Fuel cut off"
-    onmouseover="showInfo('Commande Fuel Cut-off', 'Coupe manuellement l’arrivée de carburant au moteur en cas d’urgence.')"
-    onmouseout="closeInfo()">
+    data-title="Commande Fuel Cut-off"
+    data-info="Coupe manuellement l’arrivée de carburant au moteur en cas d’urgence.">
 
-  <!-- Frein de parking -->
   <area shape="poly" coords="398,535,423,537,422,563,316,593,312,580" alt="Frein de parking" title="Frein de parking"
-    onmouseover="showInfo('Frein de parking', 'Dispositif mécanique activant le freinage permanent lors du stationnement.')"
-    onmouseout="closeInfo()">
-	
-    	<!-- Ajoute ici les autres zones définies selon la photo -->
-  </map>
+    data-title="Frein de parking"
+    data-info="Dispositif mécanique activant le freinage permanent lors du stationnement.">
+</map>
 
   <div id="info-box">
     	<strong id="info-title"></strong>
@@ -235,15 +191,39 @@
   </div>
 
   <script>
-    	function showInfo(titre, description) {
-      		document.getElementById("info-title").textContent = titre;
-      		document.getElementById("info-description").textContent = description;
-      		document.getElementById("info-box").style.display = "block";
-    	}
+  function showInfo(titre, description) {
+    document.getElementById("info-title").textContent = titre;
+    document.getElementById("info-description").textContent = description;
+    document.getElementById("info-box").style.display = "block";
+  }
 
-    	function closeInfo() {
-      		document.getElementById("info-box").style.display = "none";
-    	}
-  </script>
+  function closeInfo() {
+    document.getElementById("info-box").style.display = "none";
+  }
+
+  function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+
+  document.querySelectorAll("area").forEach(area => {
+    const title = area.dataset.title;
+    const info = area.dataset.info;
+
+    if (isTouchDevice()) {
+      area.addEventListener("click", function (e) {
+        e.preventDefault();
+        const box = document.getElementById("info-box");
+        if (box.style.display === "block") {
+          closeInfo();
+        } else {
+          showInfo(title, info);
+        }
+      });
+    } else {
+      area.addEventListener("mouseover", () => showInfo(title, info));
+      area.addEventListener("mouseout", closeInfo);
+    }
+  });
+</script>
 </body>
 </html>
