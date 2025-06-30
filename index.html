@@ -191,28 +191,30 @@
   </div>
 
   <script>
-    document.querySelectorAll("area").forEach(area => {
-      const title = area.dataset.title;
-      const info = area.dataset.info;
+  document.querySelectorAll("area").forEach(area => {
+    area.addEventListener("click", function (e) {
+      e.preventDefault();
 
-      area.addEventListener("click", function (e) {
-        e.preventDefault();
+      const box = document.getElementById("info-box");
+      const title = this.dataset.title;
+      const info = this.dataset.info;
 
-        const box = document.getElementById("info-box");
-        document.getElementById("info-title").textContent = title;
-        document.getElementById("info-description").textContent = info;
+      document.getElementById("info-title").textContent = title;
+      document.getElementById("info-description").textContent = info;
 
-        // Position dynamique au clic
-        box.style.position = "absolute";
-        box.style.left = e.pageX + "px";
-        box.style.top = e.pageY + "px";
-        box.style.display = "block";
-      });
+      // Affiche la boîte à un emplacement centré sous le clic
+      box.style.display = "block";
+      box.style.position = "absolute";
+
+      const boxWidth = box.offsetWidth || 300; // Plus robuste
+      box.style.left = (e.pageX - boxWidth / 2) + "px";
+      box.style.top = (e.pageY + 20) + "px";
     });
+  });
 
-    function closeInfo() {
-      document.getElementById("info-box").style.display = "none";
-    }
-  </script>
+  function closeInfo() {
+    document.getElementById("info-box").style.display = "none";
+  }
+</script>
 </body>
 </html>
