@@ -16,14 +16,19 @@ img {
 
 #info-box {
   position: absolute;
-  width: 300px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent */
+  backdrop-filter: blur(8px); /* Effet verre dépoli */
+  -webkit-backdrop-filter: blur(8px); /* Compatibilité Safari */
+  border-radius: 8px;
+  border: 1px solid rgba(100, 100, 100, 0.3);
   padding: 1rem;
-  border: 2px solid #444;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  display: none;
+  width: 300px;
+  color: #111; /* Texte bien lisible */
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   z-index: 1000;
+  display: none;
 }
 
 #info-box button {
@@ -35,6 +40,18 @@ img {
   color: #222;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#info-box strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#info-box p {
+  margin: 0;
+  line-height: 1.4;
 }
 
 #info-box button:hover {
