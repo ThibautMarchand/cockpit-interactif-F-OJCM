@@ -7,8 +7,9 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 1200px;
   height: auto;
+  max-width: none; /* ← désactive toute adaptation responsive */
   border: 2px solid #444;
   margin-bottom: 20px;
 }
