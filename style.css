@@ -30,11 +30,13 @@ img {
 }
 
 #info-box button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #0080d5;
-  border: none;
-  color: white;
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  font-size: 1rem;
+  background-color: #eee;
+  border: 1px solid #888;
+  color: #222;
+  border-radius: 4px;
   cursor: pointer;
 }
 
